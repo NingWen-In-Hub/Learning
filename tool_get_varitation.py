@@ -114,8 +114,8 @@ def read_file(file_path, out_filename, formname):
         print(f"ファイルが見つかりません: {file_path}")
 
 # テスト用のファイルパス
-file_path = r'C:\ning\doc\設計2024\03_詳細設計\C1000_詳細設計書\010_画面定義の作成'
-file_name = '共通_C1040_チェック条件表（単項目）.xlsx'
+file_path = r'C:\ning\doc'
+file_name = '.xlsx'
 out_filename = file_name[:8]+datetime.datetime.now().strftime('%H%M%S')+".txt"
 formname = ".a-form"
 
