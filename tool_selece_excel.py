@@ -59,10 +59,10 @@ def check_file(file_path, table, in_col):
         return []
 
 # 使用例
-# directory_path = r'C:\ning\doc\設計2024\03_詳細設計\C1000_詳細設計書\010_画面定義の作成'
-# directory_path = r'C:\ning\doc\設計2024\03_詳細設計\C1000_詳細設計書\020_帳票定義の作成'
-directory_path = r'C:\ning\doc\設計2024\03_詳細設計\C1000_詳細設計書\060_ＤＢテーブル定義の検討'
-# directory_path = r'C:\ning\doc\設計2024\03_詳細設計\C1000_詳細設計書\080_コード定義の作成'
+# directory_path = r'C:\ning\doc\'
+# directory_path = r'C:\ning\doc\'
+directory_path = r'C:\ning\doc\'
+# directory_path = r'C:\ning\doc\'
 
 file_names = list_files_in_directory(directory_path)
 # select_tble_num = '200'
