@@ -19,7 +19,7 @@ gua_dict = {
     "兑": [0, 1, 1],  # ☱ 上缺
     "巽": [1, 1, 0],  # ☴ 下断
 }
-list_gua = ['坤', '震', '坎', '兑', '艮', '离', '巽', '乾']
+trigrams = ["乾", "兑", "离", "震", "巽", "坎", "艮", "坤"]
 
 def binary_to_decimal(binary_list):
     # Convert the binary list to a string
@@ -35,9 +35,6 @@ def get_gua(year, month, day, hour):
 
     # 计算下卦（年、月、日、时之和 % 8）
     lower_trigram = (year + month + day + hour - 1) % 8
-
-    # 上下卦的组合
-    trigrams = ["乾", "兑", "离", "震", "巽", "坎", "艮", "坤"]
 
     # 输出卦象
     upper_gua = trigrams[upper_trigram]
@@ -71,8 +68,8 @@ def get_gua_name(gua_combination):
 # 计算变卦
 def get_change_gua(upper_gua, lower_gua, moving_yao):
     # 获取上卦和下卦的数值
-    upper_gua_values = gua_dict[upper_gua]
-    lower_gua_values = gua_dict[lower_gua]
+    upper_gua_values = gua_dict[upper_gua].copy()
+    lower_gua_values = gua_dict[lower_gua].copy()
 
     # 动爻改变的爻，具体根据动爻的数值来确定
     if moving_yao == 1:  # 下卦第3爻
